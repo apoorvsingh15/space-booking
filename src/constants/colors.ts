@@ -1,0 +1,33 @@
+const PRIMARY_1 = "#000000";
+const PRIMARY_2 = "#ffbb00";
+
+const MAIN_LIGHT_YELLOW = "#FFCF4B";
+const STROKE_DARK_YELLOW = "#27AE60";
+
+const MAIN_LIGHT_GREY = "#F9F9F9";
+const STROKE_DARk_GREY = "#CEC6C6";
+
+const MAIN_TEXT = "#263238";
+const SECONDARY_TEXT = "#65624C";
+
+const GRAY_1 = "#333333";
+const GRAY_2 = "#4F4F4F";
+const GRAY_3 = "#828282";
+const GRAY_4 = "#B7B6B8";
+const GRAY_5 = "#E0E0E0";
+
+export {
+  PRIMARY_1,
+  PRIMARY_2,
+  MAIN_LIGHT_YELLOW,
+  STROKE_DARK_YELLOW,
+  MAIN_LIGHT_GREY,
+  STROKE_DARk_GREY,
+  MAIN_TEXT,
+  SECONDARY_TEXT,
+  GRAY_1,
+  GRAY_2,
+  GRAY_3,
+  GRAY_4,
+  GRAY_5
+};
