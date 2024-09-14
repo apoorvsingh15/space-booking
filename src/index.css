@@ -76,6 +76,7 @@ body {
   padding-left: 25px;
   line-height: 70px;
   width: 56%;
+  color: #263238;
 }
 
 .top_section_price {
@@ -131,6 +132,9 @@ body {
 
 .dummy_image {
   width: 100%;
+  height: 202px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .badge_image {
@@ -206,8 +210,7 @@ body {
 }
 
 .image_dimensions {
-  height: 16px;
-  width: 32px;
+  object-fit: contain;
 }
 
 .speciality_item_container {
@@ -307,4 +310,45 @@ body {
   line-height: 45px;
   color: #263238;
   margin-bottom: 40px;
+}
+
+.speciality_item_flex {
+  flex: 0 0 300px;
+}
+
+.space_ad_car_wrap {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Styles for extra small (mobile phones) */
+@media (max-width: 575px) {
+  /* Mobile phone styles */
+}
+
+/* Styles for small devices (mobile phones in landscape) */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Small devices styles */
+}
+
+/* Styles for medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Tablets styles */
+}
+
+/* Styles for large devices (laptops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Laptop styles */
+  .top_section_text {
+    font-weight: 700;
+    font-size: 42px;
+    padding-top: 85px;
+    padding-left: 25px;
+    line-height: 70px;
+    width: 56%;
+    color: #263238;
+  }
 }

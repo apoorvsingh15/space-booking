@@ -11,6 +11,7 @@ interface IItemProps {
   name: string,
   day_pass_price: number,
   day_pass_discounts_percentage: { value: number }[];
+  images: string[]
 }
 
 const Home = (): React.ReactElement => {
@@ -26,68 +27,48 @@ const Home = (): React.ReactElement => {
           display: 'flex', alignItems: 'center', flexWrap: 'wrap',
           justifyContent: 'center'
         }}>
-          <div style={{ flex: '0 0 300px' }}>
-            <SpecialityItem displayText='Community Events' />
+          <div className='speciality_item_flex' >
+            <SpecialityItem displayText='Community Events' displayImage='Events' />
           </div>
-          <div style={{ flex: '0 0 300px' }}>
+          <div className='speciality_item_flex'>
             <SpecialityItem displayText='Gym Facilities' displayImage='Dumbell' />
           </div>
-          <div style={{ flex: '0 0 300px' }}>
+          <div className='speciality_item_flex'>
             <SpecialityItem displayText='High-Speed WiFi' displayImage='Wifi' />
           </div>
-          <div style={{ flex: '0 0 300px' }}>
-            <SpecialityItem displayText='Cafe & Tea Bar' />
+          <div className='speciality_item_flex'>
+            <SpecialityItem displayText='Cafe & Tea Bar' displayImage='Cafe' />
           </div>
 
 
 
-          <div style={{ flex: '0 0 300px' }}>
-            <SpecialityItem displayText='Affordable' />
+          <div className='speciality_item_flex'>
+            <SpecialityItem displayText='Affordable' displayImage='Affordable' />
           </div>
-          <div style={{ flex: '0 0 300px' }}>
-            <SpecialityItem displayText='Comfort Lounges' />
+          <div className='speciality_item_flex'>
+            <SpecialityItem displayText='Comfort Lounges' displayImage='Comfort' />
           </div>
-          <div style={{ flex: '0 0 300px' }}>
-            <SpecialityItem displayText='Quick Booking' />
+          <div className='speciality_item_flex'>
+            <SpecialityItem displayText='Quick Booking' displayImage='Quick' />
           </div>
-          <div style={{ flex: '0 0 300px' }}>
-            <SpecialityItem displayText='Sports Area' />
+          <div className='speciality_item_flex'>
+            <SpecialityItem displayText='Sports Area' displayImage='Sports' />
           </div>
         </div>
 
       </section>
       <section style={{ maxWidth: 1200, margin: '0 auto', marginBottom: 110 }}>
         <div className='display_section_text'>Our Space Overview</div>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '45px',
-          flexWrap: 'wrap',
-          justifyContent: 'center'
-        }}>
+        <div className='space_ad_car_wrap'>
           {dataRes.length > 0 && dataRes?.map((item: IItemProps, index: number) =>
           (<div key={`${item.name}-${index}`} style={{ flex: '0 0 370px' }}>
             <SpaceAdCard
               title={item.name}
               dayPassPrice={item.day_pass_price}
               discountPercentage={item.day_pass_discounts_percentage[10].value}
+              cardImage={item.images[0]}
             />
           </div>))}
-          {/* <div style={{ flex: '0 0 370px' }}>
-            <SpaceAdCard />
-          </div>
-          <div style={{ flex: '0 0 370px' }}>
-            <SpaceAdCard />
-          </div>
-          <div style={{ flex: '0 0 370px' }}>
-            <SpaceAdCard />
-          </div>
-          <div style={{ flex: '0 0 370px' }}>
-            <SpaceAdCard />
-          </div>
-          <div style={{ flex: '0 0 370px' }}>
-            <SpaceAdCard />
-          </div> */}
         </div>
       </section>
 

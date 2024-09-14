@@ -1,6 +1,5 @@
 
 import CardIcon from '../assets/images/card_icon.png';
-import DummyImage from '../assets/images/dummy_image.png';
 import BadgeImage from '../assets/images/badge.png';
 import LeftArrow from '../assets/images/left_arrow.png';
 import MiddleArrow from '../assets/images/middle_arrow.png';
@@ -10,8 +9,9 @@ interface ISpaceAdCardProps {
   title: string;
   dayPassPrice: number;
   discountPercentage: number;
+  cardImage: string;
 }
-const SpaceAdCard = ({ title, dayPassPrice, discountPercentage }: ISpaceAdCardProps) => {
+const SpaceAdCard = ({ title, dayPassPrice, discountPercentage, cardImage }: ISpaceAdCardProps) => {
   return (
     <div className='space_ad_card_container'>
       <div className='card_header'>
@@ -21,7 +21,7 @@ const SpaceAdCard = ({ title, dayPassPrice, discountPercentage }: ISpaceAdCardPr
         </div>
       </div>
       <div className='card_body'>
-        <img className='dummy_image' src={DummyImage} />
+        <img className='dummy_image' src={`https://github.com/MujtabaKably/bhive-interview-project-data/blob/main/${cardImage}?raw=true`} />
         <img className='badge_image' src={BadgeImage} />
       </div>
       <div className='card_buttons_container'>
