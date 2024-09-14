@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="download_text">Download our app now</div>
         <div className="footer_card">
           <img className='footer_image_left' src={LeftFooterImage} />
-          <div>hi</div>
+          <div></div>
           <div>
             <div className='footer_card_text_right'>Boost your productivity with the BHIVE Workspace app.
               Elevate your workspace, collaborate efficiently, and unlock exclusive perks.

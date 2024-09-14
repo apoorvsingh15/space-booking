@@ -47,23 +47,26 @@ body {
   padding-right: 8px;
   cursor: pointer;
 }
+.section_background_container {
+  padding-top: 92px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.responsive_background {
+  background-image: url("./assets/images/background_abstract.png"),
+    url("./assets/images/coworking_video.png");
+  background-position: left top, right top; /* Position the first image on the left and the second on the right */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-size: 60% auto, contain; /* Ensures both images are fully visible */
+  height: 50vh;
+}
 
 .top_section_container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-}
-
-.top_left_section {
-  /* background-image: url("./assets/images/background_abstract.png");
-  background-repeat: no-repeat; */
-}
-
-.top_right_section {
-  /* background-image: url("./assets/images/yellow_background.png");
-  /* background-image: url("./assets/images/coworking_video.png"); */
-  /* background-repeat: no-repeat;  */
 }
 
 .top_section_text {

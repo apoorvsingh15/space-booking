@@ -1,48 +1,55 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import TopNav from './TopNav';
 import TopSection from './TopSection';
 import Footer from './Footer';
 import SpaceAdCard from './SpaceAdCard';
 import SpecialityItem from './SpecialityItem';
+import { DataContext } from '../context/dataContext';
 
 const Home = (): React.ReactElement => {
+  const { dataRes } = useContext(DataContext);
+  console.log(dataRes);
   return (
     <>
       <TopNav />
       <TopSection />
-      <section style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <div style={{ flex: 1 }}>
+      <section style={{ maxWidth: 1200, margin: '0 auto', marginBottom: 120 }}>
+        <div className='display_section_text'>Why Choose Us?</div>
+        <div style={{
+          display: 'flex', alignItems: 'center', flexWrap: 'wrap',
+          justifyContent: 'center'
+        }}>
+          <div style={{ flex: '0 0 300px' }}>
             <SpecialityItem displayText='Community Events' />
           </div>
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: '0 0 300px' }}>
             <SpecialityItem displayText='Gym Facilities' displayImage='Dumbell' />
           </div>
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: '0 0 300px' }}>
             <SpecialityItem displayText='High-Speed WiFi' displayImage='Wifi' />
           </div>
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: '0 0 300px' }}>
             <SpecialityItem displayText='Cafe & Tea Bar' />
           </div>
 
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <div style={{ flex: 1 }}>
+
+
+          <div style={{ flex: '0 0 300px' }}>
             <SpecialityItem displayText='Affordable' />
           </div>
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: '0 0 300px' }}>
             <SpecialityItem displayText='Comfort Lounges' />
           </div>
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: '0 0 300px' }}>
             <SpecialityItem displayText='Quick Booking' />
           </div>
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: '0 0 300px' }}>
             <SpecialityItem displayText='Sports Area' />
           </div>
-
         </div>
+
       </section>
-      <section style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <section style={{ maxWidth: 1200, margin: '0 auto', marginBottom: 110 }}>
         <div className='display_section_text'>Our Space Overview</div>
         <div style={{
           display: 'flex',
@@ -51,7 +58,11 @@ const Home = (): React.ReactElement => {
           flexWrap: 'wrap',
           justifyContent: 'center'
         }}>
-          <div style={{ flex: '0 0 370px' }}>
+          {dataRes.length > 0 && dataRes?.map((item: { name: string }, index: number) =>
+          (<div key={`${item.name}-${index}`} style={{ flex: '0 0 370px' }}>
+            <SpaceAdCard title={item.name} />
+          </div>))}
+          {/* <div style={{ flex: '0 0 370px' }}>
             <SpaceAdCard />
           </div>
           <div style={{ flex: '0 0 370px' }}>
@@ -65,10 +76,7 @@ const Home = (): React.ReactElement => {
           </div>
           <div style={{ flex: '0 0 370px' }}>
             <SpaceAdCard />
-          </div>
-          <div style={{ flex: '0 0 370px' }}>
-            <SpaceAdCard />
-          </div>
+          </div> */}
         </div>
       </section>
 

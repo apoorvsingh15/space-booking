@@ -5,11 +5,11 @@ import BadgeImage from '../assets/images/badge.png';
 import LeftArrow from '../assets/images/left_arrow.png';
 import MiddleArrow from '../assets/images/middle_arrow.png';
 import RightArrow from '../assets/images/right_arrow.png';
-const SpaceAdCard = () => {
+const SpaceAdCard = ({ title }) => {
   return (
     <div className='space_ad_card_container'>
       <div className='card_header'>
-        <div className='header_text'>HSR Sector 6, Service Road</div>
+        <div className='header_text'>{title}</div>
         <div className='header_icon'>
           <img className='card_icon' src={CardIcon} />
         </div>
