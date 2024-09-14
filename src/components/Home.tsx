@@ -10,11 +10,7 @@ const Home = (): React.ReactElement => {
     <>
       <TopNav />
       <TopSection />
-      <div style={{ padding: 100 }}>
-        {/* <SpaceAdCard /> */}
-
-      </div>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <section style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <div style={{ flex: 1 }}>
             <SpecialityItem displayText='Community Events' />
@@ -45,9 +41,43 @@ const Home = (): React.ReactElement => {
           </div>
 
         </div>
-      </div>
+      </section>
+      <section style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <div className='display_section_text'>Our Space Overview</div>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '45px',
+          flexWrap: 'wrap',
+          justifyContent: 'center'
+        }}>
+          <div style={{ flex: '0 0 370px' }}>
+            <SpaceAdCard />
+          </div>
+          <div style={{ flex: '0 0 370px' }}>
+            <SpaceAdCard />
+          </div>
+          <div style={{ flex: '0 0 370px' }}>
+            <SpaceAdCard />
+          </div>
+          <div style={{ flex: '0 0 370px' }}>
+            <SpaceAdCard />
+          </div>
+          <div style={{ flex: '0 0 370px' }}>
+            <SpaceAdCard />
+          </div>
+          <div style={{ flex: '0 0 370px' }}>
+            <SpaceAdCard />
+          </div>
+        </div>
+      </section>
 
-      <Footer />
+      <footer style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <Footer />
+      </footer>
+      <div className='copyright_container'>
+        © Copyright 2023. Bhive Private Limited
+      </div>
     </>
   );
 };
