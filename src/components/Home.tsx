@@ -6,6 +6,13 @@ import SpaceAdCard from './SpaceAdCard';
 import SpecialityItem from './SpecialityItem';
 import { DataContext } from '../context/dataContext';
 
+
+interface IItemProps {
+  name: string,
+  day_pass_price: number,
+  day_pass_discounts_percentage: { value: number }[];
+}
+
 const Home = (): React.ReactElement => {
   const { dataRes } = useContext(DataContext);
   console.log(dataRes);
@@ -58,9 +65,13 @@ const Home = (): React.ReactElement => {
           flexWrap: 'wrap',
           justifyContent: 'center'
         }}>
-          {dataRes.length > 0 && dataRes?.map((item: { name: string }, index: number) =>
+          {dataRes.length > 0 && dataRes?.map((item: IItemProps, index: number) =>
           (<div key={`${item.name}-${index}`} style={{ flex: '0 0 370px' }}>
-            <SpaceAdCard title={item.name} />
+            <SpaceAdCard
+              title={item.name}
+              dayPassPrice={item.day_pass_price}
+              discountPercentage={item.day_pass_discounts_percentage[10].value}
+            />
           </div>))}
           {/* <div style={{ flex: '0 0 370px' }}>
             <SpaceAdCard />

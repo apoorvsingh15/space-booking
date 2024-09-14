@@ -5,7 +5,13 @@ import BadgeImage from '../assets/images/badge.png';
 import LeftArrow from '../assets/images/left_arrow.png';
 import MiddleArrow from '../assets/images/middle_arrow.png';
 import RightArrow from '../assets/images/right_arrow.png';
-const SpaceAdCard = ({ title }) => {
+
+interface ISpaceAdCardProps {
+  title: string;
+  dayPassPrice: number;
+  discountPercentage: number;
+}
+const SpaceAdCard = ({ title, dayPassPrice, discountPercentage }: ISpaceAdCardProps) => {
   return (
     <div className='space_ad_card_container'>
       <div className='card_header'>
@@ -23,7 +29,7 @@ const SpaceAdCard = ({ title }) => {
         <div className='card_left_button'>
           <div className='card_left_button_text'>
             <div className='card_left_button_text_name'>Day Pass</div>
-            <div className='card_left_button_text_price'><span className='card_left_button_text_price_value'>₹249</span>/Day</div>
+            <div className='card_left_button_text_price'><span className='card_left_button_text_price_value'>₹{dayPassPrice}</span>/Day</div>
           </div>
           <div className='card_left_button_icon'>
             <img className='left_arrow' src={LeftArrow} />
@@ -36,7 +42,8 @@ const SpaceAdCard = ({ title }) => {
         <div className='card_right_button'>
           <div className='card_left_button_text'>
             <div className='card_left_button_text_name'>Bulk Pass</div>
-            <div className='card_left_button_text_price'><span className='card_left_button_text_price_value'>₹2400</span>/10 Days</div>
+            <div className='card_left_button_text_price'>
+              <span className='card_left_button_text_price_value'>₹{Math.round((dayPassPrice * 10) - (discountPercentage / 100) * (dayPassPrice * 10))}</span>/10 Days</div>
           </div>
           <div className='card_left_button_icon'>
             <img className='left_arrow' src={LeftArrow} />
@@ -44,7 +51,7 @@ const SpaceAdCard = ({ title }) => {
             <img className='right_arrow' src={RightArrow} />
           </div>
           <div className='discount_button'>
-            20% Discount
+            {discountPercentage}% Discount
           </div>
         </div>
       </div>
