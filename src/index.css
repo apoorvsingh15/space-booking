@@ -78,6 +78,9 @@ body {
   width: 56%;
   color: #263238;
 }
+.top_section_text_mobile {
+  display: none;
+}
 
 .top_section_price {
   color: #ffbb00;
@@ -324,19 +327,321 @@ body {
   justify-content: center;
 }
 
+.footer_button_container_mobile {
+  display: none;
+  gap: 24px;
+  justify-content: center;
+}
+
 /* Styles for extra small (mobile phones) */
 @media (max-width: 575px) {
   /* Mobile phone styles */
+  .speciality_item_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0px;
+    gap: 16px;
+    cursor: pointer;
+    height: 80px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 1.08px 8.63px 0px #0000000f;
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+  .speciality_text {
+    font-size: 14px;
+  }
+  /* Disable Hover */
+  .speciality_item_container:hover {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 1.08px 8.63px 0px #0000000f;
+  }
+  .speciality_item_container:hover .speciality_description {
+    font-size: 11px;
+    color: #65624c;
+    display: none; /* Show the small text on hover */
+    transform: translateY(2); /* Bring it to its original position */
+  }
+
+  .speciality_item_container:hover .speciality_text {
+    transform: none;
+  }
+  .speciality_item_flex {
+    flex: 0 0 154px;
+  }
+  /*  */
+  .footer_image_left {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+  }
+  .top_section_text {
+    font-weight: 700;
+    font-size: 42px;
+    padding-top: 85px;
+    padding-left: 25px;
+    line-height: 70px;
+    width: 56%;
+    color: #263238;
+    display: none;
+  }
+  .top_section_text_mobile {
+    display: block;
+    color: #263238;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+    max-width: 345px;
+    margin: 0 auto;
+    margin-top: 55vh;
+  }
+  .responsive_background {
+    background-image: url("./assets/images/coworking_video.png");
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-size: contain; /* Ensures both images are fully visible */
+    height: 50vh;
+  }
+  .display_section_text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #263238;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .download_text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #605f5f;
+    margin-bottom: 165px;
+    text-align: center;
+  }
+  .footer_card_text_right {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #605f5f;
+    max-width: 310px;
+    margin-bottom: 40px;
+    display: none;
+  }
+
+  .footer_button_container {
+    display: flex;
+    gap: 24px;
+    display: none;
+  }
+
+  .footer_button_container_mobile {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+  .section_background_container {
+    padding-top: 92px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 165px;
+  }
 }
 
 /* Styles for small devices (mobile phones in landscape) */
 @media (min-width: 576px) and (max-width: 767px) {
   /* Small devices styles */
+  .speciality_item_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0px;
+    gap: 16px;
+    cursor: pointer;
+    height: 80px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 1.08px 8.63px 0px #0000000f;
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+  .speciality_text {
+    font-size: 14px;
+  }
+  /* Disable Hover */
+  .speciality_item_container:hover {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 1.08px 8.63px 0px #0000000f;
+  }
+  .speciality_item_container:hover .speciality_description {
+    font-size: 11px;
+    color: #65624c;
+    display: none; /* Show the small text on hover */
+    transform: translateY(2); /* Bring it to its original position */
+  }
+
+  .speciality_item_container:hover .speciality_text {
+    transform: none;
+  }
+  .speciality_item_flex {
+    flex: 0 0 200px;
+  }
+  /*  */
+  .footer_image_left {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .top_section_text {
+    font-weight: 700;
+    font-size: 42px;
+    padding-top: 85px;
+    padding-left: 25px;
+    line-height: 70px;
+    width: 56%;
+    color: #263238;
+    display: none;
+  }
+  .top_section_text_mobile {
+    display: block;
+    color: #263238;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+    max-width: 345px;
+    margin: 0 auto;
+    margin-top: 55vh;
+  }
+  .responsive_background {
+    background-image: url("./assets/images/coworking_video.png");
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-size: contain; /* Ensures both images are fully visible */
+    height: 50vh;
+  }
+  .display_section_text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #263238;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .download_text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #605f5f;
+    margin-bottom: 165px;
+    text-align: center;
+  }
+  .footer_card_text_right {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #605f5f;
+    max-width: 310px;
+    margin-bottom: 40px;
+    display: none;
+  }
+
+  .footer_button_container {
+    display: flex;
+    gap: 24px;
+    display: none;
+  }
+
+  .footer_button_container_mobile {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+  .section_background_container {
+    padding-top: 92px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 165px;
+  }
 }
 
 /* Styles for medium devices (tablets) */
 @media (min-width: 768px) and (max-width: 991px) {
   /* Tablets styles */
+
+  .top_section_text {
+    font-weight: 700;
+    font-size: 42px;
+    padding-top: 85px;
+    padding-left: 25px;
+    line-height: 70px;
+    width: 56%;
+    color: #263238;
+    display: none;
+  }
+  .top_section_text_mobile {
+    display: block;
+    color: #263238;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+    max-width: 345px;
+    margin: 0 auto;
+    margin-top: 55vh;
+  }
+  .responsive_background {
+    background-image: url("./assets/images/coworking_video.png");
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-size: contain; /* Ensures both images are fully visible */
+    height: 50vh;
+  }
+  .display_section_text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #263238;
+    margin-bottom: 40px;
+    padding-left: 25px;
+    text-align: center;
+  }
+  .download_text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #605f5f;
+    margin-bottom: 165px;
+    text-align: center;
+  }
+  .footer_card_text_right {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #605f5f;
+    max-width: 310px;
+    margin-bottom: 40px;
+  }
+
+  .section_background_container {
+    padding-top: 92px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 165px;
+  }
 }
 
 /* Styles for large devices (laptops) */
@@ -350,5 +655,47 @@ body {
     line-height: 70px;
     width: 56%;
     color: #263238;
+  }
+  .top_section_text_mobile {
+    display: none;
+  }
+  .responsive_background {
+    background-image: url("./assets/images/background_abstract.png"),
+      url("./assets/images/coworking_video.png");
+    background-position: left top, right top; /* Position the first image on the left and the second on the right */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-size: 53% auto, contain; /* Ensures both images are fully visible */
+    height: 50vh;
+  }
+  .display_section_text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #263238;
+    margin-bottom: 40px;
+    padding-left: 25px;
+    text-align: center;
+  }
+  .download_text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #605f5f;
+    margin-bottom: 165px;
+    text-align: center;
+  }
+  .footer_card_text_right {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #605f5f;
+    max-width: 520px;
+    margin-bottom: 40px;
+  }
+  .section_background_container {
+    padding-top: 92px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 50px;
   }
 }

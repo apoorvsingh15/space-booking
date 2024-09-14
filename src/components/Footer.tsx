@@ -19,6 +19,11 @@ const Footer = () => {
               <img className='footer_button_right_image' src={RightFooterButtonImage} />
             </div>
           </div>
+
+        </div>
+        <div className='footer_button_container_mobile'>
+          <img className='footer_button_left_image' src={LeftFooterButtonImage} />
+          <img className='footer_button_right_image' src={RightFooterButtonImage} />
         </div>
       </div>
 
